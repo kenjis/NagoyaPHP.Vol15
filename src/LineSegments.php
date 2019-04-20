@@ -25,7 +25,7 @@ class LineSegments
     }
 
     /**
-     * 線の数（長さ）を返す
+     * 線分の数（長さ）を返す
      *
      * @return int
      */
