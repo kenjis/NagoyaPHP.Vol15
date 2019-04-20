@@ -6,9 +6,21 @@ namespace Nagoyaphp\Dokaku15;
 
 class Dokaku15
 {
-    public function run(string $input): string
+    public function run(string $input) : string
     {
-        // implement me
-        return '3445';
+        $parser = new InputParser();
+        $points = $parser->parse($input);
+
+        $factory = new LineSegmentsFactory();
+        $lineSegmentsArray = $factory->create($points);
+
+        $output = [];
+        foreach ($lineSegmentsArray as $lineSegments) {
+            $output[] = $lineSegments->getCornerCount();
+        }
+
+        sort($output);
+
+        return implode('', $output);
     }
 }
