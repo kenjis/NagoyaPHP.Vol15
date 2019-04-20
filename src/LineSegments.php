@@ -25,7 +25,9 @@ class LineSegments
     }
 
     /**
-     * @return int 線の数（長さ）を返す
+     * 線の数（長さ）を返す
+     *
+     * @return int
      */
     public function getCount() : int
     {
