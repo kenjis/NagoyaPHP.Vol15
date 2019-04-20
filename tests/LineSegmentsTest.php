@@ -22,13 +22,13 @@ class LineSegmentsTest extends TestCase
     public function test_線の数を返す() : void
     {
         $lineSegments = new LineSegments(0, 1);
-        $this->assertSame(1, $lineSegments->getCount());
+        $this->assertSame(1, $lineSegments->getLineCount());
     }
 
     public function test_線の数を返す_オーバーフローした場合() : void
     {
         $lineSegments = new LineSegments(7, 0);
-        $this->assertSame(1, $lineSegments->getCount());
+        $this->assertSame(1, $lineSegments->getLineCount());
     }
 
     public function test_何角形かを返す_3() : void
