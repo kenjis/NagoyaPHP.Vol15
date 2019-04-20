@@ -12,14 +12,13 @@ class InputParser
 
         $input = (int) $input;
 
-        $n = 128;
         for ($point = 7; $point >= 0; $point--) {
+            $n = 2 ** $point;
+
             if ($input >= $n) {
                 $output[] = $point;
                 $input = $input - $n;
             }
-
-            $n = $n / 2;
         }
 
         sort($output);
