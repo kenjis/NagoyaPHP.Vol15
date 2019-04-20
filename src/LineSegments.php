@@ -1,0 +1,40 @@
+<?php
+
+declare(strict_types=1);
+
+namespace Nagoyaphp\Dokaku15;
+
+class LineSegments
+{
+    const OVERFLOW_COUNT = 8;
+
+    /**
+     * @var int 線分の始点（0〜7）
+     */
+    private $startPoint;
+
+    /**
+     * @var int 線分の終点（0〜7）
+     */
+    private $endPoint;
+
+    public function __construct(int $start, int $end)
+    {
+        $this->startPoint = $start;
+        $this->endPoint = $end;
+    }
+
+    /**
+     * @return int 線の数（長さ）を返す
+     */
+    public function getCount() : int
+    {
+        $count = $this->endPoint - $this->startPoint;
+
+        if ($count < 0) {
+            $count = $count + self::OVERFLOW_COUNT;
+        }
+
+        return $count;
+    }
+}
