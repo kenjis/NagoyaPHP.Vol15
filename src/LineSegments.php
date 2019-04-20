@@ -26,8 +26,6 @@ class LineSegments
 
     /**
      * 線分の数（長さ）を返す
-     *
-     * @return int
      */
     public function getLineSegmentCount() : int
     {
@@ -42,8 +40,6 @@ class LineSegments
 
     /**
      * 何角形かを返す
-     *
-     * @return int
      */
     public function getCornerCount() : int
     {
