@@ -4,6 +4,10 @@ declare(strict_types=1);
 
 namespace Nagoyaphp\Dokaku15;
 
+/**
+ * 八角形の辺の線分の集まり
+ * 頂点の場所を表す始点と終点を持つ
+ */
 class LineSegments
 {
     const OVERFLOW_COUNT = 8;
