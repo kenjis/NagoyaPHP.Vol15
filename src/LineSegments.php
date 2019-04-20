@@ -29,7 +29,7 @@ class LineSegments
      *
      * @return int
      */
-    public function getLineCount() : int
+    public function getLineSegmentCount() : int
     {
         $count = $this->endPoint - $this->startPoint;
 
@@ -47,10 +47,10 @@ class LineSegments
      */
     public function getCornerCount() : int
     {
-        if ($this->getLineCount() === (self::OVERFLOW_COUNT / 2)) {
-            return $this->getLineCount() + 1;
+        if ($this->getLineSegmentCount() === (self::OVERFLOW_COUNT / 2)) {
+            return $this->getLineSegmentCount() + 1;
         }
 
-        return $this->getLineCount() + 2;
+        return $this->getLineSegmentCount() + 2;
     }
 }
