@@ -13,12 +13,12 @@ class LineSegments
     const OVERFLOW_COUNT = 8;
 
     /**
-     * @var int 線分の始点（0〜7）
+     * @var int 線の始点（0〜7）
      */
     private $startPoint;
 
     /**
-     * @var int 線分の終点（0〜7）
+     * @var int 線の終点（0〜7）
      */
     private $endPoint;
 
