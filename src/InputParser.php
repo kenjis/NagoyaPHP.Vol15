@@ -13,58 +13,66 @@ class InputParser
         $input = (int) $input;
 
         $n = 128;
+        $point = 7;
 
         if ($input >= $n) {
-            $output[] = 7;
+            $output[] = $point;
             $input = $input - $n;
         }
 
         $n = $n / 2;
+        $point--;
 
         if ($input >= $n) {
-            $output[] = 6;
+            $output[] = $point;
             $input = $input - $n;
         }
 
         $n = $n / 2;
+        $point--;
 
         if ($input >= $n) {
-            $output[] = 5;
+            $output[] = $point;
             $input = $input - $n;
         }
 
         $n = $n / 2;
+        $point--;
 
         if ($input >= $n) {
-            $output[] = 4;
+            $output[] = $point;
             $input = $input - $n;
         }
 
         $n = $n / 2;
+        $point--;
 
         if ($input >= $n) {
-            $output[] = 3;
+            $output[] = $point;
             $input = $input - $n;
         }
 
         $n = $n / 2;
+        $point--;
 
         if ($input >= $n) {
-            $output[] = 2;
+            $output[] = $point;
             $input = $input - $n;
         }
 
         $n = $n / 2;
+        $point--;
 
         if ($input >= $n) {
-            $output[] = 1;
+            $output[] = $point;
             $input = $input - $n;
         }
 
         $n = $n / 2;
+        $point--;
 
         if ($input === $n) {
-            $output[] = 0;
+            $output[] = $point;
             $input = $input - $n;
         }
 
