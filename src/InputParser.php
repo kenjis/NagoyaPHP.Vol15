@@ -42,6 +42,11 @@ class InputParser
             $input = $input - 4;
         }
 
+        if ($input >= 2) {
+            $output[] = 1;
+            $input = $input - 2;
+        }
+
         if ($input === 1) {
             $output[] = 0;
             $input = $input - 1;

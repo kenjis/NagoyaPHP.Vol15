@@ -41,4 +41,12 @@ class InputParserTest extends TestCase
 
         $this->assertSame($expected, $this->parser->parse($input));
     }
+
+    public function test_255の場合() : void
+    {
+        $input = '255';
+        $expected = [0, 1, 2, 3, 4, 5, 6, 7];
+
+        $this->assertSame($expected, $this->parser->parse($input));
+    }
 }
