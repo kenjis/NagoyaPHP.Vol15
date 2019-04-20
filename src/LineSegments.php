@@ -37,4 +37,18 @@ class LineSegments
 
         return $count;
     }
+
+    /**
+     * 何角形かを返す
+     *
+     * @return int
+     */
+    public function getCornerCount() : int
+    {
+        if ($this->getCount() === (self::OVERFLOW_COUNT / 2)) {
+            return $this->getCount() + 1;
+        }
+
+        return $this->getCount() + 2;
+    }
 }
